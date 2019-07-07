@@ -2,6 +2,10 @@ package com.bridjit.learning.learning;
 
 import java.util.Arrays;
 
+/**
+ * @author taleb
+ * twin exercice
+ * */
 public class Twin {
 
 	/**

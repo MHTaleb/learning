@@ -1,5 +1,8 @@
 package com.bridjit.learning.learning;
-
+/**
+ * calc exercice
+ * @author taleb
+ * */
 public class SubArrayTools {
 
 	public static final String NULL_ERROR_MESSAGE = "Empty Array please provide an instanciated array";
