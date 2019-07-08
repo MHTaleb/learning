@@ -9,7 +9,7 @@ public class MathTable {
 	public static double average(double[] values) {
 		if(values == null) throw new NullPointerException(NULL_TABLE_PARAM);
 		if(values.length == 0) return 0;
-		return DoubleStream.of(values).sum() / values.length;
+		return DoubleStream.of(values).average().getAsDouble();
 	}
 	
 }
