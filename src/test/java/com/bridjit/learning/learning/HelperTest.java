@@ -1,5 +1,7 @@
 package com.bridjit.learning.learning;
 
+import org.junit.Assert;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -15,10 +17,25 @@ public class HelperTest extends TestCase{
 	}
 
 	/**
-	 * optional should be empty unparçable string 
+	 * parsing non numeric string rise illegal argument exception
 	 * */
-	public void testParsingEmpty() {
-		assertFalse(Helper.toInteger("a").isPresent());
+	public void testParsingArgumentException() {
+		try {
+			Helper.toInteger("a");
+		} catch (IllegalArgumentException e) {
+			assertTrue(true);
+		}
+	}
+	
+	/**
+	 * parsing null string rise illegal argument exception
+	 * */
+	public void testParsingNullArgumentException() {
+		try {
+			Helper.toInteger(null);
+		} catch (IllegalArgumentException e) {
+			assertTrue(true);
+		}
 	}
 	
 
@@ -26,6 +43,6 @@ public class HelperTest extends TestCase{
 	 * optional should be present 
 	 * */
 	public void testParsingPresent() {
-		assertTrue(Helper.toInteger("2").isPresent());
+		assertTrue(Helper.toInteger("2") == 2);
 	}
 }

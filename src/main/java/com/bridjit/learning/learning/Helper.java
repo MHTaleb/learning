@@ -4,13 +4,8 @@ import java.util.Optional;
 
 public class Helper {
 
-	public static Optional<Integer> toInteger(String s){
-		try {
-			return Optional.ofNullable(Integer.parseInt(s));
-		}catch(NumberFormatException ex) {
-			return Optional.empty();
-		}
-		
+	public static int toInteger(String s){
+		return Optional.ofNullable(Integer.parseInt(s)).orElseThrow(IllegalArgumentException::new);
 	}
 	
 }
