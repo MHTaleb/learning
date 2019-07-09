@@ -1,6 +1,5 @@
 package com.bridjit.learning.learning;
 
-import org.junit.Assert;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -44,5 +43,12 @@ public class HelperTest extends TestCase{
 	 * */
 	public void testParsingPresent() {
 		assertTrue(Helper.toInteger("2") == 2);
+	}
+	
+	/**
+	 * optional should be present 
+	 * */
+	public void testParsingNegativeNumber() {
+		assertTrue(Helper.toInteger("-2") == -2);
 	}
 }
